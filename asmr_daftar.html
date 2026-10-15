@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASMR Daftarcha — Yoz va Rohatlan</title>
+<style>
+:root{--bg:#f5f0e7;--paper:#fffdf7;--ink:#26352d;--muted:#8b9188;--green:#54745f;--line:#dce6e9;--shadow:0 18px 55px #44351b12}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 15% 10%,#fffaf0 0,transparent 30%),var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;min-height:100vh}
+button,input{font:inherit}button{cursor:pointer;border:0;transition:transform .16s,background .2s}button:active{transform:scale(.97)}
+.app{max-width:1400px;margin:auto;padding:26px 28px 34px}.topbar{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:24px}.brand{display:flex;align-items:center;gap:13px}.logo{width:46px;height:46px;border-radius:15px;background:#dfe8d8;display:grid;place-items:center;font-size:23px;box-shadow:inset 0 0 0 1px #b6c9b5}.brand h1{font-size:20px;letter-spacing:.11em;margin:0;font-weight:850}.brand p{margin:4px 0 0;color:var(--muted);font-size:12px;letter-spacing:.04em}.top-actions{display:flex;align-items:center;gap:10px}.save-state{font-size:12px;color:#6f8b72;display:flex;align-items:center;gap:7px;padding:10px 13px;background:#e8efe3;border-radius:30px}.dot{width:7px;height:7px;background:#6d9a70;border-radius:50%}.icon-btn,.soft-btn{background:#fffdf7;border:1px solid #e8e1d5;color:#536057;border-radius:12px;padding:11px 13px}.icon-btn{font-size:17px}.layout{display:grid;grid-template-columns:255px minmax(0,1fr);gap:22px;align-items:start}.sidebar{background:#fffaf1b8;border:1px solid #e9e1d3;border-radius:22px;padding:18px;box-shadow:var(--shadow)}.side-head{display:flex;justify-content:space-between;align-items:center;margin:0 0 15px}.side-head h2{font-size:11px;letter-spacing:.15em;color:#8a8f83;margin:0}.add-btn{width:31px;height:31px;border-radius:10px;background:#dfe8d8;color:#426047;font-size:20px}.note-list{display:flex;flex-direction:column;gap:7px}.note-item{display:flex;align-items:center;gap:10px;text-align:left;background:transparent;color:#59645a;border-radius:12px;padding:12px 10px;width:100%;min-width:0}.note-item.active{background:#e9eee2;color:#2e4b37}.note-icon{font-size:17px}.note-info{min-width:0;flex:1}.note-name{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.note-date{font-size:10px;color:#9b9e93;margin-top:4px}.note-item .mini-dot{width:5px;height:5px;border-radius:50%;background:#7a9b76;opacity:0}.note-item.active .mini-dot{opacity:1}.side-bottom{border-top:1px solid #eee6d9;margin-top:18px;padding-top:16px}.tip{background:#f1eadc;border-radius:14px;padding:13px;color:#777665;font-size:11px;line-height:1.55}.tip strong{display:block;color:#59614f;margin-bottom:4px;font-size:12px}.workspace{min-width:0}.welcome{display:flex;justify-content:space-between;align-items:end;gap:15px;margin:1px 4px 15px}.eyebrow{font-size:10px;letter-spacing:.18em;color:#9b9a8b;font-weight:750;text-transform:uppercase}.welcome h2{font-size:26px;margin:7px 0 0;letter-spacing:-.04em;font-weight:720}.welcome p{margin:6px 0 0;color:#93958a;font-size:12px}.tools{display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:flex-end}.tool-btn{padding:10px 13px;border-radius:11px;background:#fffaf1;border:1px solid #e8e1d5;color:#697268;font-size:12px}.tool-btn.primary{background:#496b53;color:white;border-color:#496b53}.sound-panel{display:flex;align-items:center;gap:12px;background:#e6ebdf;border:1px solid #d7e0d1;padding:12px 15px;border-radius:15px;margin-bottom:14px}.sound-toggle{display:flex;align-items:center;gap:9px;color:#426048;font-weight:750;font-size:12px}.switch{width:35px;height:20px;background:#9aa99a;border-radius:20px;padding:3px;display:flex;align-items:center;transition:.2s}.switch span{width:14px;height:14px;background:#fff;border-radius:50%;transition:.2s}.switch.on{background:#4c7858}.switch.on span{transform:translateX(15px)}.sound-desc{color:#7b8a78;font-size:11px;flex:1}.volume{width:105px;accent-color:#54745f}.sound-icon{font-size:18px}.paper-shell{background:#e9e1d3;border-radius:19px;padding:12px;box-shadow:var(--shadow);position:relative}.paper{position:relative;min-height:580px;background-color:var(--paper);border-radius:11px;overflow:hidden;box-shadow:0 2px 4px #41341b08,inset 0 0 0 1px #f2ede1}.paper:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(to bottom,transparent 0,transparent 35px,var(--line) 36px,var(--line) 37px);pointer-events:none;opacity:.85}.paper:after{content:"";position:absolute;top:0;bottom:0;left:66px;width:1px;background:#e8bdb5;pointer-events:none;opacity:.8}.paper-head{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;padding:20px 28px 12px 86px;border-bottom:1px solid #f0e9dc;gap:12px}.title-input{background:transparent;border:0;outline:0;color:#5e6a5c;font-weight:750;font-size:14px;width:min(60%,450px)}.paper-meta{font-size:10px;color:#b1b1a5;white-space:nowrap}.editor-wrap{position:relative;z-index:1;padding:10px 35px 34px 86px}.editor{position:relative;z-index:1;min-height:475px;outline:none;white-space:pre-wrap;overflow-wrap:anywhere;font-family:"Segoe Print","Bradley Hand", "Comic Sans MS",cursive;font-size:18px;line-height:37px;color:#34473a;caret-color:#4b7454;letter-spacing:.15px}.editor:empty:before{content:"Bugun xayolimga kelgan fikrlarni yozaman...";color:#b7b9ac;pointer-events:none}.paper-footer{position:relative;z-index:1;display:flex;justify-content:space-between;align-items:center;padding:12px 25px 14px 86px;color:#aaa99b;font-size:10px;border-top:1px solid #f0e9dc}.keyboard{margin-top:15px;background:#e5ded2;border:1px solid #d9d0c1;border-radius:16px;padding:12px;box-shadow:0 8px 20px #473a2510}.keyboard-top{display:flex;align-items:center;justify-content:space-between;padding:0 3px 10px;color:#898a7d;font-size:10px;letter-spacing:.12em}.keys{display:flex;flex-direction:column;gap:6px}.key-row{display:flex;gap:5px;justify-content:center}.key{height:34px;min-width:0;flex:1;max-width:58px;border-radius:7px;background:linear-gradient(#fffdf8,#f4efe6);box-shadow:0 2px 0 #d0c7b9;border:1px solid #e5ddcf;color:#77766b;font-size:11px;display:grid;place-items:center;user-select:none}.key.wide{max-width:90px;flex:1.5}.key.space{max-width:340px;flex:5}.key:active,.key.pressed{transform:translateY(2px);box-shadow:0 0 0 #d0c7b9;background:#e0eadb}.footnote{display:flex;justify-content:space-between;gap:12px;color:#a19f91;font-size:10px;padding:13px 3px 0}.toast{position:fixed;bottom:22px;left:50%;transform:translate(-50%,20px);opacity:0;background:#304c37;color:#fff;padding:11px 16px;border-radius:12px;font-size:12px;box-shadow:0 10px 30px #0002;transition:.25s;pointer-events:none;z-index:10}.toast.show{opacity:1;transform:translate(-50%,0)}.modal-backdrop{position:fixed;inset:0;background:#1c271f55;display:none;place-items:center;padding:20px;z-index:20}.modal-backdrop.show{display:grid}.modal{background:#fffaf1;border-radius:20px;padding:24px;width:min(430px,100%);box-shadow:0 20px 70px #0002}.modal h3{margin:0 0 8px}.modal p{color:#898a7d;font-size:13px;line-height:1.5}.modal input{width:100%;padding:12px;border-radius:10px;border:1px solid #ded7c9;background:white;outline-color:#8da58c;margin:9px 0 15px}.modal-actions{display:flex;justify-content:flex-end;gap:8px}.danger{color:#9a5146}
+@media(max-width:900px){.layout{grid-template-columns:1fr}.sidebar{order:2}.workspace{order:1}.note-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.side-bottom{display:none}.paper{min-height:520px}.editor{min-height:420px}}
+@media(max-width:600px){.app{padding:15px 12px}.topbar{align-items:flex-start}.brand h1{font-size:16px}.save-state{display:none}.welcome{align-items:flex-start;flex-direction:column}.welcome h2{font-size:23px}.tools{justify-content:flex-start}.sound-desc{display:none}.sound-panel{flex-wrap:wrap}.paper-shell{padding:7px}.paper:after{left:38px}.paper-head{padding:17px 14px 12px 48px}.editor-wrap{padding:10px 15px 28px 48px}.editor{font-size:16px;line-height:37px}.paper-footer{padding-left:48px}.paper{min-height:480px}.editor{min-height:370px}.key{height:30px;font-size:9px}.keyboard{padding:8px}.key-row{gap:3px}.note-list{grid-template-columns:1fr}.footnote{font-size:9px}}
+</style>
+</head>
+<body>
+<div class="app">
+  <header class="topbar">
+    <div class="brand"><div class="logo">✎</div><div><h1>ASMR NOTEBOOK</h1><p>YOZ · TINGLA · ROHATLAN</p></div></div>
+    <div class="top-actions"><div class="save-state"><span class="dot"></span><span id="saveLabel">Avtomatik saqlanadi</span></div><button class="icon-btn" id="exportBtn" title="Matnni yuklab olish">⇩</button><button class="icon-btn" id="clearBtn" title="Daftarni tozalash">⌫</button></div>
+  </header>
+  <main class="layout">
+    <aside class="sidebar">
+      <div class="side-head"><h2>MENING DAFTARLARIM</h2><button class="add-btn" id="newNote" title="Yangi daftar">+</button></div>
+      <div class="note-list" id="noteList"></div>
+      <div class="side-bottom"><div class="tip"><strong>☁ Kichik eslatma</strong>Yozuvlaring ushbu brauzerda avtomatik saqlanadi. Brauzer ma’lumotlarini tozalasang, yozuvlar ham o‘chishi mumkin.</div></div>
+    </aside>
+    <section class="workspace">
+      <div class="welcome"><div><div class="eyebrow">SENING SHAXSIY MAKONING</div><h2>Fikrlaringni qog‘ozga tushir.</h2><p>Har bir tugma — kichik bir ASMR lahzasi.</p></div><div class="tools"><button class="tool-btn" id="soundTest">♫ Ovoz sinovi</button><button class="tool-btn" id="renameBtn">✎ Nomini o‘zgartir</button><button class="tool-btn primary" id="newNote2">＋ Yangi daftar</button></div></div>
+      <div class="sound-panel"><div class="sound-icon">🎧</div><button class="sound-toggle" id="soundToggle"><span class="switch on" id="switch"><span></span></span><span id="soundText">ASMR YOQILGAN</span></button><div class="sound-desc">Yumshoq mexanik klavishlar · qog‘oz shitirlashi</div><label style="font-size:10px;color:#7b8a78" for="volume">OVOZ</label><input class="volume" id="volume" type="range" min="0" max="100" value="48" aria-label="Ovoz balandligi"/></div>
+      <div class="paper-shell">
+        <div class="paper">
+          <div class="paper-head"><input class="title-input" id="noteTitle" value="Yangi daftar" maxlength="70" aria-label="Daftar nomi"/><span class="paper-meta" id="dateLabel"></span></div>
+          <div class="editor-wrap"><div class="editor" id="editor" contenteditable="true" spellcheck="false" role="textbox" aria-label="Daftarga yozish" aria-multiline="true"></div></div>
+          <div class="paper-footer"><span id="wordCount">0 ta so‘z · 0 ta belgi</span><span>✦ sening fikrlaring, sening sahifang</span></div>
+        </div>
+      </div>
+      <div class="keyboard"><div class="keyboard-top"><span>VIRTUAL KLAVIATURA</span><span>Klaviaturada yoz yoki tugmani bos</span></div><div class="keys" id="keys"></div></div>
+      <div class="footnote"><span>⌨ Harf bosilganda ASMR tovushi chiqadi</span><span>Mahalliy saqlash · Internet talab qilinmaydi</span></div>
+    </section>
+  </main>
+</div>
+<div class="toast" id="toast"></div>
+<div class="modal-backdrop" id="modal"><div class="modal"><h3 id="modalTitle">Yangi daftar</h3><p id="modalDesc">Daftaringga nom ber.</p><input id="modalInput" maxlength="70" placeholder="Masalan: Mening g‘oyalarim"/><div class="modal-actions"><button class="tool-btn" id="modalCancel">Bekor qilish</button><button class="tool-btn primary" id="modalOk">Davom etish</button></div></div></div>
+<script>
+(() => {
+  const $ = id => document.getElementById(id);
+  const STORE = 'asmr-notebook-v1';
+  const nowText = () => new Date().toLocaleDateString('uz-UZ',{day:'2-digit',month:'short',year:'numeric'});
+  let state = loadState(), activeId = state.activeId, soundOn = true, audioCtx = null, volume = .48, saveTimer = null, modalMode = 'new';
+  function uid(){return 'n'+Date.now().toString(36)+Math.random().toString(36).slice(2,6)}
+  function loadState(){
+    try{const x=JSON.parse(localStorage.getItem(STORE));if(x&&Array.isArray(x.notes)&&x.notes.length)return x;}catch(e){}
+    const id=uid();return {activeId:id,notes:[{id,title:'Mening birinchi daftarim',text:'',updated:Date.now()}]};
+  }
+  function persist(){
+    try{localStorage.setItem(STORE,JSON.stringify(state));$('saveLabel').textContent='Saqlandi ✓';renderNotes();}
+    catch(e){$('saveLabel').textContent='Saqlash imkoni yo‘q';}
+  }
+  function current(){return state.notes.find(n=>n.id===activeId)||state.notes[0]}
+  function scheduleSave(){ $('saveLabel').textContent='Saqlanmoqda…';clearTimeout(saveTimer);saveTimer=setTimeout(()=>{const n=current();if(n){n.text=$('editor').innerText;n.title=$('noteTitle').value||'Nomsiz daftar';n.updated=Date.now()}persist();updateCounts()},250)}
+  function escapeHTML(s){return s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+  function renderNotes(){
+    const list=$('noteList');list.innerHTML='';
+    state.notes.forEach(n=>{
+      const b=document.createElement('button');b.className='note-item'+(n.id===activeId?' active':'');
+      const title=n.title||'Nomsiz daftar';b.innerHTML=`<span class="note-icon">${n.id===activeId?'📖':'📓'}</span><span class="note-info"><span class="note-name">${escapeHTML(title)}</span><span class="note-date">${new Date(n.updated||Date.now()).toLocaleDateString('uz-UZ',{day:'numeric',month:'short'})}</span></span><span class="mini-dot"></span>`;
+      b.addEventListener('click',()=>switchNote(n.id));list.appendChild(b);
+    });
+  }
+  function switchNote(id){if(id===activeId)return;flush();activeId=id;state.activeId=id;const n=current();$('noteTitle').value=n.title||'';$('editor').innerText=n.text||'';$('dateLabel').textContent=nowText();renderNotes();updateCounts();persist();}
+  function flush(){const n=current();if(n){n.title=$('noteTitle').value||'Nomsiz daftar';n.text=$('editor').innerText;n.updated=Date.now()}}
+  function updateCounts(){const t=$('editor').innerText;const words=t.trim()?t.trim().split(/\s+/).length:0;$('wordCount').textContent=`${words} ta so‘z · ${t.length} ta belgi`}
+  function toast(msg){$('toast').textContent=msg;$('toast').classList.add('show');setTimeout(()=>$('toast').classList.remove('show'),2100)}
+  function ensureAudio(){if(!audioCtx){const C=window.AudioContext||window.webkitAudioContext;if(C)audioCtx=new C()}if(audioCtx&&audioCtx.state==='suspended')audioCtx.resume();return audioCtx}
+  function noise(duration,filterFreq,kind='lowpass',gain=0.07){
+    const c=ensureAudio();if(!c)return;const len=Math.max(1,Math.floor(c.sampleRate*duration));const buffer=c.createBuffer(1,len,c.sampleRate),data=buffer.getChannelData(0);
+    for(let i=0;i<len;i++)data[i]=(Math.random()*2-1)*(1-i/len);
+    const src=c.createBufferSource(),f=c.createBiquadFilter(),g=c.createGain();src.buffer=buffer;f.type=kind;f.frequency.value=filterFreq;g.gain.setValueAtTime(0.0001,c.currentTime);g.gain.exponentialRampToValueAtTime(Math.max(.0002,gain*volume),c.currentTime+.004);g.gain.exponentialRampToValueAtTime(.0001,c.currentTime+duration);src.connect(f);f.connect(g);g.connect(c.destination);src.start();src.stop(c.currentTime+duration);
+  }
+  function tone(freq,duration,gain=.035,type='triangle'){
+    const c=ensureAudio();if(!c)return;const o=c.createOscillator(),g=c.createGain();o.type=type;o.frequency.setValueAtTime(freq,c.currentTime);o.frequency.exponentialRampToValueAtTime(Math.max(35,freq*.72),c.currentTime+duration);g.gain.setValueAtTime(.0001,c.currentTime);g.gain.exponentialRampToValueAtTime(gain*volume,c.currentTime+.003);g.gain.exponentialRampToValueAtTime(.0001,c.currentTime+duration);o.connect(g);g.connect(c.destination);o.start();o.stop(c.currentTime+duration)}
+  // Qisqa, quruq mexanik klavish "qirt/klik" ovozi
+  function clickSound(key='letter'){
+    if(!soundOn||volume<=0)return;
+    const c=ensureAudio(); if(!c)return;
+    const t=c.currentTime;
+    const isSpace=key==='space', isEnter=key==='enter', isBack=key==='backspace';
+    const freq=isSpace?1050:isEnter?760:isBack?1450:1800+Math.random()*850;
+    const dur=isSpace?.045:isEnter?.065:isBack?.035:.022;
+    // Tez, juda qisqa shovqin zarbasi — plastik/mexanik tugma bosilishi
+    const len=Math.floor(c.sampleRate*dur);
+    const buf=c.createBuffer(1,len,c.sampleRate), data=buf.getChannelData(0);
+    for(let i=0;i<len;i++){
+      const env=Math.pow(1-i/len,3);
+      data[i]=(Math.random()*2-1)*env;
+    }
+    const src=c.createBufferSource(), hp=c.createBiquadFilter(), g=c.createGain();
+    src.buffer=buf; hp.type='highpass'; hp.frequency.value=freq;
+    g.gain.setValueAtTime(Math.max(.0001,volume*(isSpace?.19:isEnter?.23:isBack?.15:.22)),t);
+    g.gain.exponentialRampToValueAtTime(.0001,t+dur);
+    src.connect(hp); hp.connect(g); g.connect(c.destination); src.start(t); src.stop(t+dur);
+    // Pastroq "thock" qatlam — haqiqiy klavishning tagiga urilishiga o‘xshash
+    const o=c.createOscillator(), og=c.createGain();
+    o.type='triangle'; o.frequency.setValueAtTime(isSpace?125:isEnter?95:isBack?170:145+Math.random()*65,t);
+    o.frequency.exponentialRampToValueAtTime(isSpace?72:65,t+(isEnter?.045:.025));
+    og.gain.setValueAtTime(.0001,t);
+    og.gain.exponentialRampToValueAtTime(Math.max(.0001,volume*(isSpace?.09:.075)),t+.002);
+    og.gain.exponentialRampToValueAtTime(.0001,t+(isEnter?.055:.03));
+    o.connect(og); og.connect(c.destination); o.start(t); o.stop(t+(isEnter?.06:.035));
+  }
+  function paperSound(){if(soundOn){noise(.2,700,'bandpass',.055);setTimeout(()=>noise(.13,1800,'highpass',.035),80)}}
+  function insertText(text){ensureAudio();$('editor').focus();document.execCommand('insertText',false,text);clickSound(text===' '?'space':text==='\n'?'enter':'letter');scheduleSave()}
+  function renderKeys(){
+    const rows=[['1','2','3','4','5','6','7','8','9','0'],['Q','W','E','R','T','Y','U','I','O','P'],['A','S','D','F','G','H','J','K','L'],['Z','X','C','V','B','N','M','⌫'],['?123',',','☻','SPACE','.','↵']];
+    $('keys').innerHTML='';
+    rows.forEach(row=>{const r=document.createElement('div');r.className='key-row';row.forEach(k=>{const b=document.createElement('button');b.className='key'+(['⌫','↵','?123'].includes(k)?' wide':'')+(k==='SPACE'?' space':'');b.textContent=k==='SPACE'?'space':k;b.setAttribute('aria-label',k);b.addEventListener('click',()=>{if(k==='⌫'){document.execCommand('delete');clickSound('backspace');scheduleSave()}else if(k==='↵'){insertText('\n');paperSound()}else if(k==='?123'){toast('Raqam va belgilar klaviaturangda mavjud')}else if(k==='☻'){paperSound();toast('Yozishda davom et — har bir lahza o‘zingniki')}else if(k===','){insertText(',')}else if(k==='.')insertText('.');else if(k==='SPACE')insertText(' ');else insertText(k.toLowerCase());b.classList.add('pressed');setTimeout(()=>b.classList.remove('pressed'),120)});r.appendChild(b)});$('keys').appendChild(r)});
+  }
+  function openModal(mode){modalMode=mode;$('modalTitle').textContent=mode==='new'?'Yangi daftar yaratish':'Daftar nomini o‘zgartirish';$('modalDesc').textContent=mode==='new'?'Yangi sahifangga esda qoladigan nom ber.':'Ushbu daftarning yangi nomini yoz.';$('modalInput').value=mode==='rename'?current().title:'';$('modal').classList.add('show');setTimeout(()=>$('modalInput').focus(),50)}
+  function closeModal(){$('modal').classList.remove('show')}
+  function createNote(title){flush();const n={id:uid(),title:title||'Yangi daftar',text:'',updated:Date.now()};state.notes.unshift(n);activeId=n.id;state.activeId=activeId;$('noteTitle').value=n.title;$('editor').innerText='';$('dateLabel').textContent=nowText();persist();renderNotes();updateCounts();$('editor').focus();paperSound();toast('Yangi daftar tayyor!')}
+  $('newNote').onclick=$('newNote2').onclick=()=>openModal('new');
+  $('renameBtn').onclick=()=>openModal('rename');
+  $('modalCancel').onclick=closeModal;
+  $('modal').addEventListener('click',e=>{if(e.target===$('modal'))closeModal()});
+  $('modalOk').onclick=()=>{const title=$('modalInput').value.trim();if(!title){$('modalInput').focus();return}if(modalMode==='new')createNote(title);else{current().title=title;$('noteTitle').value=title;current().updated=Date.now();persist();toast('Daftar nomi yangilandi')}closeModal()};
+  $('modalInput').addEventListener('keydown',e=>{if(e.key==='Enter')$('modalOk').click();if(e.key==='Escape')closeModal()});
+  $('editor').addEventListener('input',()=>{clickSound('letter');scheduleSave()});
+  $('editor').addEventListener('keydown',e=>{if(e.key==='Backspace'){clickSound('backspace')}else if(e.key==='Enter'){clickSound('enter');paperSound()}else if(e.key===' '){clickSound('space')}else if(e.key.length===1&&!e.ctrlKey&&!e.metaKey){/* input event provides a fallback sound */}});
+  $('noteTitle').addEventListener('input',scheduleSave);
+  $('soundToggle').onclick=()=>{soundOn=!soundOn;$('switch').classList.toggle('on',soundOn);$('soundText').textContent=soundOn?'ASMR YOQILGAN':'ASMR O‘CHIRILGAN';if(soundOn){ensureAudio();clickSound('letter')}toast(soundOn?'ASMR yoqildi':'ASMR o‘chirildi')};
+  $('volume').addEventListener('input',e=>volume=Number(e.target.value)/100);
+  $('soundTest').onclick=()=>{ensureAudio();if(!soundOn){soundOn=true;$('switch').classList.add('on');$('soundText').textContent='ASMR YOQILGAN'}clickSound('letter');setTimeout(()=>clickSound('letter'),95);setTimeout(()=>clickSound('space'),190);setTimeout(()=>clickSound('enter'),285);toast('Mexanik klaviatura ovozi 🎧')};
+  $('clearBtn').onclick=()=>{if(confirm('Ushbu daftardagi barcha matnni o‘chirasanmi?')){$('editor').innerText='';scheduleSave();paperSound();toast('Daftar tozalandi')}};
+  $('exportBtn').onclick=()=>{flush();const n=current();const blob=new Blob([n.title+'\n\n'+n.text],{type:'text/plain;charset=utf-8'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=(n.title||'daftar').replace(/[\\/:*?"<>|]/g,'_')+'.txt';a.click();URL.revokeObjectURL(url);toast('Matn .txt fayl qilib yuklandi')};
+  document.addEventListener('keydown',e=>{if(e.altKey&&e.key==='n'){e.preventDefault();openModal('new')}});
+  const n=current();$('noteTitle').value=n.title||'';$('editor').innerText=n.text||'';$('dateLabel').textContent=nowText();renderKeys();renderNotes();updateCounts();
+})();
+</script>
+</body>
+</html>
